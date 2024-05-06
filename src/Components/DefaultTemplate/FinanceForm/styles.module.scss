@@ -1,0 +1,66 @@
+@import "../../styles/inputs.scss";
+@import "../../styles/typograph.scss";
+
+
+.financeForm {
+    border: 1px solid var(--grey-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    max-width: 350px;
+    width: 100%;
+    height: 400px;
+
+    label,
+    select {
+        @extend %paragraph;
+    }
+
+    input,
+    select {
+        @extend %input;
+    }
+
+    select {
+        appearance: none;
+        background-image: url("../../../src/assets/arrowDown.png");
+        background-repeat: no-repeat;
+        background-position: right .625rem center;
+        background-size: 1.2rem;
+
+    }
+
+
+    span {
+        padding-top: 0.5rem;
+        @extend %paragraph;
+        color: var(--grey-3);
+    }
+
+    button {
+        max-width: 320px;
+        width: 100%;
+        height: 45px;
+        margin-top: 1rem;
+        border-radius: 8px;
+        background-color: var(--color-primary);
+        color: white;
+
+        font-family: var(--font-secondary);
+        font-weight: 500;
+        font-size: 1rem;
+
+        &:hover {
+            background-color: var(--color-primary-2);
+        }
+    }
+
+    .errorMessage {
+        font-family: var(--font-secondary);
+        font-size: .875rem;
+        margin-top: 0.5rem;
+    }
+}

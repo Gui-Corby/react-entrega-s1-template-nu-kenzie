@@ -1,0 +1,90 @@
+@import "../../../styles/typograph.scss";
+@import "../../../styles/financeCard.scss";
+
+li {
+    .gridContainer {
+
+        h3 {
+            @extend %title;
+            font-size: 1rem;
+            min-width: 18.75rem
+        }
+
+
+        h4,
+        span {
+            @extend %paragraph;
+
+        }
+
+
+        button {
+            @extend %paragraph;
+            max-width: 90px;
+            width: 100%;
+            height: 26px;
+            width: 3.125rem;
+            margin-top: .8rem;
+            font-size: .625rem;
+            border-radius: 2px;
+            border: 2px solid none;
+            background-color: var(--grey-2);
+        }
+    }
+
+}
+
+
+.credit {
+    @extend %li;
+    border-left-color: var(--color-secondary);
+    ;
+}
+
+.debit {
+    @extend %li;
+    border-left-color: var(--grey-2);
+}
+
+
+
+@media (max-width: 425px) {
+
+    .gridContainer {
+        button {
+            margin-left: 9rem;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .gridContainer {
+        button {
+            margin-left: 12rem;
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    li {
+        height: 90px;
+        width: 100%;
+        min-width: 650px;
+    }
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 14.5rem;
+
+        h4 {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+        }
+
+
+    }
+
+}
