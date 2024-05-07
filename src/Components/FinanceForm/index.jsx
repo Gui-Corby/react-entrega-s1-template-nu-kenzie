@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./styles.module.scss";
-import arrowDown from "../../assets/arrowDown.png";
 
 export const FinanceForm = ({ setEntryList }) => {
   const [description, setDescription] = useState("");
